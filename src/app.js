@@ -1,24 +1,36 @@
 setInterval(function () {
-  let losAngelesElement = document.querySelector("#los-angeles");
-  if (losAngelesElement) {
-    let losAngelesDateElement = losAngelesElement.querySelector(".date");
-    let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-    let losAngelesTime = moment().tz("America/Los_Angeles");
+  let honoluluElement = document.querySelector("#honolulu");
+  if (honoluluElement) {
+    let honoluluDateElement = honoluluElement.querySelector(".date");
+    let honoluluTimeElement = honoluluElement.querySelector(".time");
+    let honoluluTime = moment().tz("America/New_York");
 
-    losAngelesDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    losAngelesTimeElement.innerHTML = losAngelesTime.format(
+    honoluluDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    honoluluTimeElement.innerHTML = honoluluTime.format(
       "H:mm:ss[<small>]A[</small>]"
     );
   }
 
-  let parisElement = document.querySelector("#paris");
-  if (parisElement) {
-    let parisDateElement = parisElement.querySelector(".date");
-    let parisTimeElement = parisElement.querySelector(".time");
-    let parisTime = moment().tz("Europe/Paris");
+  let berlinElement = document.querySelector("#berlin");
+  if (berlinElement) {
+    let berlinDateElement = berlinElement.querySelector(".date");
+    let berlinTimeElement = berlinElement.querySelector(".time");
+    let berlinTime = moment().tz("Europe/berlin");
 
-    parisDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    parisTimeElement.innerHTML = parisTime.format(
+    berlinDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    berlinTimeElement.innerHTML = berlinTime.format(
+      "h:mm:ss[<small>]A[</small>]"
+    );
+  }
+
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/tokyo");
+
+    tokyoDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
       "h:mm:ss[<small>]A[</small>]"
     );
   }
