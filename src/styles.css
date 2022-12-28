@@ -1,5 +1,5 @@
 body {
-  background-color: #f9f7fe;
+  background: linear-gradient(to top, #dfe9f3 0%, white 100%);
   font-family: sans-serif;
 }
 
@@ -17,7 +17,7 @@ h2 {
 .container {
   max-width: 600px;
   margin: 60px auto;
-  background: white;
+  background-image: url("https://img.freepik.com/free-vector/white-gray-geometric-pattern-background-vector_53876-136510.jpg?w=900&t=st=1672246237~exp=1672246837~hmac=926f82311585ac0c0ff3914ac97432376b79b77685cdae7ea87a9589d0d85928");
   padding: 30px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
