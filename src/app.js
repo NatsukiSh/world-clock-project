@@ -1,37 +1,17 @@
 setInterval(function () {
-  let honoluluElement = document.querySelector("#honolulu");
-  if (honoluluElement) {
-    let honoluluDateElement = honoluluElement.querySelector(".date");
-    let honoluluTimeElement = honoluluElement.querySelector(".time");
-    let honoluluTime = moment().tz("America/New_York");
+  let cityElement = document.querySelector(".city");
+  if (cityElement) {
+    let dateElement = cityElement.querySelector(".date");
+    let timeElement = cityElement.querySelector(".time");
+    let differentTimeZone = moment()
+      .tz("Pacific/Honolulu")
+      .tz("Europe/Berlin")
+      .tz("Asia/Tokyo");
 
-    honoluluDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    honoluluTimeElement.innerHTML = honoluluTime.format(
+    dateElement.innerHTML = moment().format("MMMM Do YYYY");
+
+    timeElement.innerHTML = differentTimeZone.format(
       "H:mm:ss[<small>]A[</small>]"
-    );
-  }
-
-  let berlinElement = document.querySelector("#berlin");
-  if (berlinElement) {
-    let berlinDateElement = berlinElement.querySelector(".date");
-    let berlinTimeElement = berlinElement.querySelector(".time");
-    let berlinTime = moment().tz("Europe/berlin");
-
-    berlinDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    berlinTimeElement.innerHTML = berlinTime.format(
-      "h:mm:ss[<small>]A[</small>]"
-    );
-  }
-
-  let tokyoElement = document.querySelector("#tokyo");
-  if (tokyoElement) {
-    let tokyoDateElement = tokyoElement.querySelector(".date");
-    let tokyoTimeElement = tokyoElement.querySelector(".time");
-    let tokyoTime = moment().tz("Asia/tokyo");
-
-    tokyoDateElement.innerHTML = moment().format("MMMM Do YYYY");
-    tokyoTimeElement.innerHTML = tokyoTime.format(
-      "h:mm:ss[<small>]A[</small>]"
     );
   }
 }, 1000);
