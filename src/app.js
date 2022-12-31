@@ -1,20 +1,21 @@
 setInterval(function () {
-  let cityElement = document.querySelector(".city");
-  if (cityElement) {
-    let dateElement = cityElement.querySelector(".date");
-    let timeElement = cityElement.querySelector(".time");
-    let differentTimeZone = moment()
-      .tz("Pacific/Honolulu")
-      .tz("Europe/Berlin")
-      .tz("Asia/Tokyo");
+  let honoluluElement = document.querySelector("#honolulu");
+  let berlinElement = document.querySelector("#berlin");
+  let tokyoElement = document.querySelector("#tokyo");
 
-    dateElement.innerHTML = moment().format("MMMM Do YYYY");
-
-    timeElement.innerHTML = differentTimeZone.format(
-      "H:mm:ss[<small>]A[</small>]"
-    );
-  }
+  formatCityTime(honoluluElement, "Pacific/Honolulu");
+  formatCityTime(berlinElement, "Europe/Berlin");
+  formatCityTime(tokyoElement, "Asia/Tokyo");
 }, 1000);
+
+function formatCityTime(mainElemnt, timezone) {
+  let cildDateElement = mainElemnt.querySelector(".date");
+  let cildTimeElement = mainElemnt.querySelector(".time");
+
+  let time = moment().tz(timezone);
+  cildDateElement.innerHTML = time.format("MMMM Do YYYYY");
+  cildTimeElement.innerHTML = time.format("H:mm:ss[<small>]A[</small>]");
+}
 
 function updateCity(event) {
   let cityTimeZone = event.target.value;
