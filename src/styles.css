@@ -64,4 +64,23 @@ footer {
   text-align: center;
   font-size: 18px;
   color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 30px;
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 400px) {
+  .time {
+    font-size: 32px;
+  }
+
+  .date {
+    font-size: 12px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
 }

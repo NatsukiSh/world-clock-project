@@ -13,7 +13,7 @@ function formatCityTime(mainElemnt, timezone) {
   let cildTimeElement = mainElemnt.querySelector(".time");
 
   let time = moment().tz(timezone);
-  cildDateElement.innerHTML = time.format("MMMM Do YYYYY");
+  cildDateElement.innerHTML = time.format("MMMM Do YYYY");
   cildTimeElement.innerHTML = time.format("H:mm:ss[<small>]A[</small>]");
 }
 
